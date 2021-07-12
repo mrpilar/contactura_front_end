@@ -8,18 +8,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  loginForm = new FormGroup({
+    loginForm = new FormGroup({
     username: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
   });
 
   constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 
   login() {
     if (this.loginForm.valid) {
-      localStorage.setItem('token', 'coxinhanovarkina');
+      localStorage.setItem('token', 'teste');
       this.router.navigate(['/lista-contatos']);
     }
   }

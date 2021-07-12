@@ -2,10 +2,20 @@
   display: flex;
   justify-content: center;
   margin: 180px 0px;
+
+}
+
+::ng-deep body {
+  background-image: linear-gradient(to right, #90CAF8, #7023B7);
 }
 
 .example-card {
-  max-width: 400px;
+
+  max-width: 300px;
+  max-height: 400px;
+  margin: 0 auto;
+  width: 40%;
+  height: 40%
 }
 
 example-form {
@@ -28,7 +38,7 @@ example-form {
   justify-content: center;
 
   img {
-    width: 250px;
+    width: 150px;
   }
 
 }
