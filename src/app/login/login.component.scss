@@ -1,7 +1,7 @@
 :host {
   display: flex;
   justify-content: center;
-  margin: 180px 0px;
+  //margin: auto;
 
 }
 
@@ -10,12 +10,9 @@
 }
 
 .example-card {
+  margin: auto;
+  margin-top: 15%;
 
-  max-width: 300px;
-  max-height: 400px;
-  margin: 0 auto;
-  width: 40%;
-  height: 40%
 }
 
 example-form {
