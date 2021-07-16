@@ -16,6 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import { NavbarComponent } from './sharedComponents/navbar/navbar.component';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -27,6 +29,7 @@ import {MatInputModule} from '@angular/material/input';
     FormUsuariosComponent,
     NotFoundComponent,
     FormContatosComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

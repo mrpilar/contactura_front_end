@@ -1,17 +1,10 @@
 :host {
   display: flex;
-  justify-content: center;
-  //margin: auto;
 
-}
-
-::ng-deep body {
-  background-image: linear-gradient(to right, #90CAF8, #7023B7);
 }
 
 .example-card {
-  margin: auto;
-  margin-top: 15%;
+  max-width: 400px;
 
 }
 
@@ -38,4 +31,13 @@ example-form {
     width: 150px;
   }
 
+}
+
+.container-login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-image: linear-gradient(to right, #90CAF8, #7023B7);
+  align-items: center;
+  justify-content: center;
 }
