@@ -9,7 +9,7 @@ import { ListaContatosComponent } from './lista-contatos/lista-contatos.componen
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { FormUsuariosComponent } from './form-usuarios/form-usuarios.component';
 import { NotFoundComponent } from './sharedComponents/not-found/not-found.component';
-import { FormContatosComponent } from './cadastro-contatos/form-contatos/form-contatos.component';
+import { FormContatosComponent } from './form-contatos/form-contatos.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './sharedComponents/navbar/navbar.component';
 
@@ -27,10 +27,9 @@ import {MatIconModule} from '@angular/material/icon';
     ListaContatosComponent,
     ListaUsuariosComponent,
     FormUsuariosComponent,
-    NotFoundComponent,
     FormContatosComponent,
+    NotFoundComponent,
     NavbarComponent
-
   ],
   imports: [
     BrowserModule,
