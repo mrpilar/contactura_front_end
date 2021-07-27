@@ -7,10 +7,12 @@
 
 .container_form {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   background-color: white;
-  padding: 10px;
-  margin-left: 10%;
+  padding: 30px;
+  justify-content: center;
+  justify-items: center;
 }
 
 .text_input {
@@ -19,7 +21,7 @@
 }
 
 .email_input {
-  width: 207%;
+  width: 205%;
   height: 20px
 }
 
@@ -27,7 +29,6 @@
 .nome_form {
   width: 100%;
   margin-right: 15px;
-  column-gap: 10px;
 }
 
 .phone_form {
@@ -38,13 +39,13 @@
 
 .email_form {
   grid-column: 1 / 2;
-  width: 100%;
+  width: 100%
 
 }
 
 .container_buttons {
-  padding: 10px;
-  margin-left: 10%;
+  margin: 30px;
+  //margin-left: 10%;
 }
 
 p {
@@ -53,15 +54,15 @@ p {
 
 //media query para desktop com o minimo de 769px
 
-@media screen and (min-width: 769px) {
-  .container_form {
-    display: grid;
-    background-color: white;
-    float: none;
-    width: 100%;
-  }
+//@media screen and (min-width: 769px) {
+  //.container_form {
+    //display: grid;
+    //background-color: white;
+    //float: none;
+    //width: 100%;
+ // }
 
-  p {
-    margin: 0;
-  }
-}
+ // p {
+ //   margin: 0;
+ // }
+//}
