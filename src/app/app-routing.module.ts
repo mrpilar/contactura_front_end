@@ -16,6 +16,7 @@ const routes: Routes = [
 {path:'lista-contatos', component:ListaContatosComponent, canActivate:[AuthGuard]},
 {path:'lista-usuarios', component:ListaUsuariosComponent,canActivate:[AuthGuard]},
 {path:'cadastro-contatos', component:FormContatosComponent, canActivate:[AuthGuard]},
+//depois alterar o canActivate para [AuthAdminGuard]
 {path:'cadastro-usuarios', component:FormUsuariosComponent, canActivate:[AuthAdminGuard]},
 {path:'**', component:NotFoundComponent}
 ];
