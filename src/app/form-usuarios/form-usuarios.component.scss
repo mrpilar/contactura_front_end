@@ -43,38 +43,3 @@ h1 {
 p {
   margin: 0;
 }
-
-// media query para desktop com o minimo de 769px
-
-/*@media screen and (min-width: 769px) {
-  .container_form {
-    display: grid;
-    grid-template-columns: auto auto;
-    background-color: white;
-    padding: 10px;
-  }
-
-  .nome_form {
-    margin-bottom: 15px;
-    text-align: left;
-    width: 100%
-  }
-
-  .email_form {
-    text-align: left;
-    width: 100%
-  }
-
-  .phone_form {
-    text-align: left;
-    width: 100%
-  }
-
-  .container_buttons {
-    padding: 10px;
-  }
-
-  p {
-    margin: 0;
-  }
-}*/

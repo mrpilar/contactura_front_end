@@ -10,7 +10,7 @@
   grid-gap: 30px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   background-color: white;
-  padding: 30px;
+  padding: 5px;
   justify-content: center;
   justify-items: center;
 }
@@ -28,12 +28,11 @@
 
 .nome_form {
   width: 100%;
-  margin-right: 15px;
+  margin-right: 5px;
 }
 
 .phone_form {
-  margin-left: 30px;
-  margin-bottom: 15px;
+  margin-left: 0px;
   width: 100%;
 }
 
@@ -44,25 +43,11 @@
 }
 
 .container_buttons {
-  margin: 30px;
-  //margin-left: 10%;
+  margin: 5px;
+
 }
 
 p {
   margin: 0;
 }
 
-//media query para desktop com o minimo de 769px
-
-//@media screen and (min-width: 769px) {
-  //.container_form {
-    //display: grid;
-    //background-color: white;
-    //float: none;
-    //width: 100%;
- // }
-
- // p {
- //   margin: 0;
- // }
-//}
