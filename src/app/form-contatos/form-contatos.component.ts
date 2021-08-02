@@ -2,42 +2,52 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { ContatosService } from '../service/contatos/contatos.service';
 
 @Component({
   selector: 'app-form-contatos',
   templateUrl: './form-contatos.component.html',
-  styleUrls: ['./form-contatos.component.scss']
+  styleUrls: ['./form-contatos.component.scss'],
 })
 export class FormContatosComponent implements OnInit {
-
-  formContatos = new FormGroup ({
-    id: new FormControl(''),
+  formContatos = new FormGroup({
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    phone: new FormControl('',[Validators.required])
+    phone: new FormControl('', [Validators.required]),
   });
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    public contatosService: ContatosService
+  ) {}
 
   ngOnInit(): void {
+    this.contatosService.botaoEdit.subscribe(edit => {
+      if (edit !== null) {
+        console.log(edit, 'valor do edit');
+        this.formContatos.get('name').setValue(edit.name);
+        this.formContatos.get('phone').setValue(edit.phone);
+        this.formContatos.get('email').setValue(edit.email);
+      }
+    });
   }
 
-  save(){
-    if(this.formContatos.valid) {
+  save() {
+    console.log('form saved');
+    if (this.formContatos.valid) {
       Swal.fire({
-        icon:'success',
-        title:'Eeeeeeba...',
-        text: 'Contato criado com sucesso!'
+        icon: 'success',
+        title: 'Eeeeeba..',
+        text: 'Contato criado com sucesso!',
       });
-      this.router.navigate(['lista-contatos']);
-
-    }else {
+      this.router.navigate(['/lista-contatos']);
+    } else {
       Swal.fire({
-        icon:'error',
-        title:'oopssss',
-        text:'Cadastro não realizado, preencha corretamente todos os campos'
+        icon: 'error',
+        title: 'Ooooops..',
+        text:
+          'Cadastro não realizado,' + 'preecha corretamente todos os campos',
       });
     }
   }
-
 }

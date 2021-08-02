@@ -35,7 +35,10 @@
           <td data-label="Nome">{{contact.name}}</td>
           <td data-label="Email">{{contact.email}}</td>
           <td data-label="Fone">{{contact.phone}}</td>
-          <td>menu</td>
+          <td><div class="container_buttons_table">
+            <mat-icon (click)="deleteContacts(contact)">delete</mat-icon>
+            <mat-icon (click)="editContatos(contact)">edit</mat-icon>
+          </div></td>
         </tr>
       </tbody>
     </table>
