@@ -13,6 +13,7 @@ import { FormContatosComponent } from './form-contatos/form-contatos.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './sharedComponents/navbar/navbar.component';
 
+
 // imports do material design
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';

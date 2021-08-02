@@ -1,44 +1,28 @@
-
 <app-navbar></app-navbar>
-<!--título do formulario de cadastrar novos contatos-->
+
 <section>
-  <div class="container_title">
-<strong><h1>Cadastrar Novo Usuário</h1></strong>
-  </div>
-</section>
-
-<!--formulario de cadastro de contato para desktop-->
-<section>
-
-  <div class="container_form">
-
-    <div class="nome_form">
-      <p>Nome: </p>
-      <input class="text_input" type="text" id=""/>
+  <div class="gridContainer">
+    <div class="emailInput">
+      <label for="email">Email:</label>
+      <input type="text" id="email" />
     </div>
 
-    <div class="phone_form">
-      <p>Senha: </p>
-      <input class="text_input" type="text" id="" />
+    <div class="passwordInput">
+      <label for="password">Password:</label>
+      <input type="text" id="password" />
     </div>
 
-    <div class="email_form">
-      <p>Email: </p>
-      <input class="email_input" type="text" id="" />
+    <div class="nomeInput">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" />
+      <div>
+        <button mat-raised-button color="primary">Salvar Usuário</button>
+      </div>
     </div>
 
-    <div class="checkbox_input">
-      <input type="checkbox" id="" name="Administrador" value="">
-  <label for="vehicle1">Administrador?</label>
+    <div class="checkboxInput">
+      <input type="checkbox" />
+      <label>Administrador?</label>
     </div>
-
-  </div>
-</section>
-
-
-<!--botao de salvar contatos-->
-<section>
-  <div class="container_buttons">
-    <button mat-raised-button color="primary">Salvar Usuário</button>
   </div>
 </section>

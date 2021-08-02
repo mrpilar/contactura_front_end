@@ -1,37 +1,34 @@
 <app-navbar></app-navbar>
-<!--título do formulario de cadastrar novos contatos-->
+
 <section>
   <div class="container_title">
-<strong><h1>Cadastrar Novo Contato</h1></strong>
+    <h1>FORMULÁRIO DE CONTATO</h1>
   </div>
 </section>
 
-<!--formulario de cadastro de contato para desktop-->
 <section>
+  <form [formGroup] = "formContatos">
+    <div class="grid-container">
+      <div>
+        <span>Nome:</span>
+        <input formControleName="name" type="text" name="nome">
+      </div>
 
-  <div class="container_form">
+      <div>
+        <span>Phone:</span>
+        <input formControleName="phone" type="text" name="phone">
+      </div>
 
-    <div class="nome_form">
-      <p>Nome: </p>
-      <input class="text_input" type="text" id="" />
     </div>
 
-    <div class="phone_form">
-      <p>Phone: </p>
-      <input class="text_input" type="text" id="" />
+    <div class="container-email">
+      <div>
+        <span>Email:</span>
+        <input formControleName="email" type="text" name="email">
+      </div>
+      <div>
+        <button mat-raised-button color="primary" (click)="save()">Salvar Contato</button>
+      </div>
     </div>
-
-    <div class="email_form">
-      <p>Email: </p>
-      <input class="email_input" type="text" id="" />
-    </div>
-
-  </div>
-</section>
-
-<!--botao de salvar contatos-->
-<section>
-  <div class="container_buttons">
-    <button mat-raised-button color="primary">Salvar Contato</button>
-  </div>
+  </form>
 </section>

@@ -1,62 +1,94 @@
-.container_title {
-  display: flex;
-  margin-top: 20px;
-  justify-content: center;
+.gridContainer {
 
-}
-
-.container_form {
   display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  background-color: white;
-  padding: 5px;
-  justify-content: center;
-  justify-items: center;
-  margin-left: 5px;
-}
-
-.text_input {
-  width: 95%;
-  height: 20px
-}
-
-.email_input {
-  width: 90%;
-  height: 20px
-}
-
-
-.nome_form {
-  width: 95%;
-  margin-right: 5px;
-}
-
-.phone_form {
-  margin-left: 0px;
-  width: 95%;
-}
-
-.email_form {
-  margin-left: 40px;
-  grid-column: 1 / 2;
-  width: 100%
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20vh 70vh 10vh;
+  grid-gap: 20px;
+  margin: 50px;
 
 }
 
-.container_buttons {
-  margin-left: 30px;
+.emailInput{
+
+  display: flex;
+  flex-direction: column;
+
+  label {
+
+    font-size: 1.2em;
+
+  }
+
+  input{
+
+    width: 40vw;
+    height: 3.8vh;
+  }
+
 
 }
 
-.checkbox_input {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-left: 45px;
-  width: 100%;
+.passwordInput{
+
+  display: flex;
+  flex-direction: column;
+
+  label {
+
+    font-size: 1.2em;
+
+  }
+
+  input{
+
+    width: 40vw;
+    height: 3.8vh;
+  }
+
+
 }
 
-p {
-  margin: 0;
+
+.nomeInput{
+
+  display: flex;
+  flex-direction: column;
+
+  label {
+
+    font-size: 1.2em;
+
+  }
+
+  input{
+
+    width: 40vw;
+    height: 3.8vh;
+  }
+
+  button{
+
+    margin-top: 30px;
+
+  }
+
+
 }
 
+.checkboxInput {
+
+
+  input{
+
+    width: 3vw;
+    height: 3vh;
+
+  }
+
+  label{
+    font-size: 1.2em;
+    font-size: 300;
+  }
+
+
+}
