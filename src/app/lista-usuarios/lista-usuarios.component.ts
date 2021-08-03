@@ -28,6 +28,7 @@ export class ListaUsuariosComponent implements OnInit {
         name: 'teste' + i,
         username: 'teste' + i,
         password: 1 + i + i + i ,
+        admin: 'sim',
       });
     }
 

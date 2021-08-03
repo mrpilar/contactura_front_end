@@ -26,6 +26,7 @@
           <th scope="col">Nome</th>
           <th scope="col">Username</th>
           <th scope="col">Password</th>
+          <th scope="col">Admin</th>
           <th>menu</th>
         </tr>
       </thead>
@@ -35,6 +36,7 @@
           <td data-label="Nome">{{user.name}}</td>
           <td data-label="Username">{{user.username}}</td>
           <td data-label="Password">{{user.password}}</td>
+          <td data-label="Password">{{user.admin}}</td>
           <td><div class="container_buttons_table">
             <mat-icon (click)="deleteUsers(user)">delete</mat-icon>
             <mat-icon (click)="editContatos(user)">edit</mat-icon>
