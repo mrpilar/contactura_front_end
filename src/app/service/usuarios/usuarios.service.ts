@@ -12,7 +12,7 @@ export class UsuariosService {
 
   constructor() { }
 
-  getContactsList(usuarios: User) {
+  getUserList(usuarios: User) {
     this.dataEdit.next(usuarios);
   }
 }
