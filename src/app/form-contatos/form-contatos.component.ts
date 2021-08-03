@@ -25,6 +25,7 @@ export class FormContatosComponent implements OnInit {
         this.formContatos.get('name').setValue(edit.name);
         this.formContatos.get('phone').setValue(edit.phone);
         this.formContatos.get('email').setValue(edit.email);
+        // this.formContatos.get('id').setValue(edit.id);
       }
     });
   }

@@ -1,28 +1,30 @@
 <app-navbar></app-navbar>
 
 <section>
+  <form [formGroup] = "formUsuarios">
   <div class="gridContainer">
     <div class="emailInput">
-      <label for="email">Email:</label>
-      <input type="text" id="email" />
+      <label for="Email">Email: </label>
+      <input formControlName="email" type="email" name="email">
     </div>
 
     <div class="passwordInput">
       <label for="password">Password:</label>
-      <input type="text" id="password" />
+      <input formControlName="password" type="password" name="password">
     </div>
 
     <div class="nomeInput">
       <label for="nome">Nome:</label>
-      <input type="text" id="nome" />
+      <input formControlName="name" type="text" name="nome">
       <div>
-        <button mat-raised-button color="primary">Salvar Usuário</button>
+        <button type="button" mat-raised-button color="primary" (click)="save()">Salvar Usuário</button>
       </div>
     </div>
 
     <div class="checkboxInput">
-      <input type="checkbox" />
+      <input formControlName="admin" type="checkbox" name="administrador">
       <label>Administrador?</label>
     </div>
   </div>
+  </form>
 </section>

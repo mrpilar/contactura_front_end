@@ -14,7 +14,7 @@ const routes: Routes = [
 {path:'', redirectTo:'/login', pathMatch:'full'},
 {path:'login', component:LoginComponent},
 {path:'lista-contatos', component:ListaContatosComponent, canActivate:[AuthGuard]},
-{path:'lista-Wusuarios', component:ListaUsuariosComponent,canActivate:[AuthGuard]},
+{path:'lista-usuarios', component:ListaUsuariosComponent,canActivate:[AuthGuard]},
 {path:'cadastro-contatos', component:FormContatosComponent, canActivate:[AuthGuard]},
 {path:'cadastro-usuarios', component:FormUsuariosComponent, canActivate:[AuthAdminGuard]},
 {path:'**', component:NotFoundComponent}

@@ -8,13 +8,13 @@ import { ContatosService } from '../service/contatos/contatos.service';
 @Component({
   selector: 'app-lista-contatos',
   templateUrl: './lista-contatos.component.html',
-  styleUrls: ['./lista-contatos.component.scss'],
+  styleUrls: ['./lista-contatos.component.scss']
 })
 export class ListaContatosComponent implements OnInit {
 
   contactsList: Contacts[];
   collection = { count: 10, data: [] };
-  constructor(public contatosService: ContatosService, private router: Router) {}
+  constructor(public contatosService: ContatosService, private router: Router) { }
 
   ngOnInit(): void {
     this.populateContacts();
@@ -26,7 +26,7 @@ export class ListaContatosComponent implements OnInit {
     for (let i = 0; i < this.collection.count; i++) {
       this.collection.data.push({
         //no meu código não tinha o id, mas no print da professora tinha, qualquer coisa remover depois
-        //id: i,
+        id: i,
         name: 'teste' + i,
         email: 'email' + i + '@contactura.com',
         phone: '(' + 0 + 8 + 1 + ')' + 9 + i + i + i + i + '-' + i + i + i + i
@@ -40,7 +40,7 @@ export class ListaContatosComponent implements OnInit {
   editContatos(contatos: Contacts) {
     console.log('edit esta funcionando', contatos);
     this.contatosService.getContactsList(contatos);
-    this.router.navigate(['/cadastro-contatos'])
+    this.router.navigate(['/cadastro-contatos']);
   }
 
   deleteContacts(contatos: Contacts) {
@@ -56,7 +56,7 @@ export class ListaContatosComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire(
-          'Deletado com sucesso'
+          'Deletado com sucesso',
         );
       }
   });
