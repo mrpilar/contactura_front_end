@@ -13,16 +13,13 @@ export class FormContatosComponent implements OnInit {
   formContatos = new FormGroup({
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    phone: new FormControl('', [Validators.required]),
+    phone: new FormControl('', [Validators.required])
   });
 
-  constructor(
-    private router: Router,
-    public contatosService: ContatosService
-  ) {}
+  constructor(private router: Router,  public contatosService: ContatosService) { }
 
   ngOnInit(): void {
-    this.contatosService.botaoEdit.subscribe(edit => {
+    this.contatosService.botaoEdit.subscribe( edit => {
       if (edit !== null) {
         console.log(edit, 'valor do edit');
         this.formContatos.get('name').setValue(edit.name);
@@ -33,21 +30,24 @@ export class FormContatosComponent implements OnInit {
   }
 
   save() {
-    console.log('form saved');
-    if (this.formContatos.valid) {
+    console.log('form');
+    if(this.formContatos.valid) {
       Swal.fire({
-        icon: 'success',
-        title: 'Eeeeeba..',
-        text: 'Contato criado com sucesso!',
+        icon:'success',
+        title: 'Eeeeeba...',
+        text: 'Contato criado com sucesso!'
       });
       this.router.navigate(['/lista-contatos']);
-    } else {
+    }else{
       Swal.fire({
         icon: 'error',
         title: 'Ooooops..',
-        text:
-          'Cadastro não realizado,' + 'preecha corretamente todos os campos',
+        text: 'Cadastro não realizado,' +
+        'preencha corretamente todos os campos'
       });
-    }
   }
 }
+
+}
+
+

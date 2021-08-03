@@ -14,7 +14,6 @@ export class ListaContatosComponent implements OnInit {
 
   contactsList: Contacts[];
   collection = { count: 10, data: [] };
-
   constructor(public contatosService: ContatosService, private router: Router) {}
 
   ngOnInit(): void {
@@ -26,6 +25,8 @@ export class ListaContatosComponent implements OnInit {
   populateContacts() {
     for (let i = 0; i < this.collection.count; i++) {
       this.collection.data.push({
+        //no meu código não tinha o id, mas no print da professora tinha, qualquer coisa remover depois
+        //id: i,
         name: 'teste' + i,
         email: 'email' + i + '@contactura.com',
         phone: '(' + 0 + 8 + 1 + ')' + 9 + i + i + i + i + '-' + i + i + i + i
