@@ -1,94 +1,68 @@
-.gridContainer {
+.container_title {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
+.grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 20vh 70vh 10vh;
-  grid-gap: 20px;
-  margin: 50px;
+  grid-template-columns: auto auto;
+  grid-gap: 1.5em;
+  margin: 20px;
+
+  input {
+    width: 100%;
+  }
 
 }
 
-.emailInput{
-
-  display: flex;
-  flex-direction: column;
-
-  label {
-
-    font-size: 1.2em;
-
-  }
-
-  input{
-
-    width: 40vw;
-    height: 3.8vh;
-  }
-
+.container-nome {
+  display: grid;
+  grid-template-columns: auto auto;
+  //grid-gap: 1.5em;
+  margin: 20px;
 
 }
 
-.passwordInput{
+.nome {
+  width: 96%;
+}
 
-  display: flex;
-  flex-direction: column;
+.checkbox {
+  margin-top: 20px;
+  padding: 0px;
+}
 
-  label {
+p {
+  margin: 0;
+}
 
-    font-size: 1.2em;
-
-  }
-
-  input{
-
-    width: 40vw;
-    height: 3.8vh;
-  }
-
-
+.button {
+  margin: 20px;
 }
 
 
-.nomeInput{
+@media screen and (max-width: 767px){
 
-  display: flex;
-  flex-direction: column;
+  .grid-container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1.5em;
+    margin: 20px;
+  }
 
-  label {
-
-    font-size: 1.2em;
+  .container-nome {
+    display: grid;
+    grid-template-columns: auto;
+    //grid-gap: 1.5em;
+    margin: 20px;
 
   }
 
-  input{
-
-    width: 40vw;
-    height: 3.8vh;
-  }
-
-  button{
-
-    margin-top: 30px;
-
+  .nome {
+    width: 100%;
   }
 
 
 }
 
-.checkboxInput {
-
-
-  input{
-
-    width: 3vw;
-    height: 3vh;
-
-  }
-
-  label{
-    font-size: 1.2em;
-    font-size: 300;
-  }
-
-
-}
