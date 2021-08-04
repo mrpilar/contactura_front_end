@@ -26,11 +26,15 @@ export class FormContatosComponent implements OnInit {
         this.formContatos.get('phone').setValue(edit.phone);
         this.formContatos.get('email').setValue(edit.email);
         // this.formContatos.get('id').setValue(edit.id);
+        this.resetar();
       }
     });
   }
 
+
+
   save() {
+
     console.log('form');
     if(this.formContatos.valid) {
       Swal.fire({
@@ -38,7 +42,9 @@ export class FormContatosComponent implements OnInit {
         title: 'Eeeeeba...',
         text: 'Contato criado com sucesso!'
       });
+
       this.router.navigate(['/lista-contatos']);
+
     }else{
       Swal.fire({
         icon: 'error',
@@ -48,6 +54,12 @@ export class FormContatosComponent implements OnInit {
       });
   }
 }
+
+  //limpa o formulario
+  resetar () {
+    this.formContatos.reset();
+  }
+
 
 }
 

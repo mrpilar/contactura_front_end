@@ -32,6 +32,7 @@ export class FormUsuariosComponent implements OnInit {
         this.formUsuarios.get('name').setValue(edit.username);
         this.formUsuarios.get('password').setValue(edit.password);
         this.formUsuarios.get('admin').setValue(edit.admin);
+        this.resetar();
       }
     });
   }
@@ -53,6 +54,11 @@ export class FormUsuariosComponent implements OnInit {
         'preencha corretamente todos os campos'
       });
     }
+  }
+
+  //limpa o formulario
+  resetar () {
+    this.formUsuarios.reset();
   }
 
 }
